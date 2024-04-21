@@ -18,5 +18,4 @@ const route = useRoute();
 const { data: userDetails, pending } = await useFetch<UserDetails>(
   `https://jsonplaceholder.typicode.com/users/${route.params.id}`
 );
-console.log(userDetails.value?.id);
 </script>
