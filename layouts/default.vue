@@ -1,7 +1,7 @@
 <template>
   <div class="site-container">
     <AwesomeHeader />
-    <main class="site-main">
+    <main>
       <slot />
     </main>
     <AwesomeFooter />
@@ -13,12 +13,5 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-}
-
-.site-main {
-  display: flex;
-  flex: 1;
-  width: 100%;
-  box-sizing: border-box;
 }
 </style>
