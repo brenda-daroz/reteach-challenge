@@ -8,7 +8,7 @@
         <li><a href="/">Home 4</a></li>
       </ul>
     </nav>
-    <button class="navbar-burger" @click="$emit('toggle-dropdown')">
+    <button class="navbar-burger" @click="$emit('toggle-menu')">
       <span v-if="isNavMenuOpen">✖</span>
       <span v-else>☰</span>
     </button>
@@ -20,7 +20,7 @@ export default {
   props: {
     isNavMenuOpen: Boolean,
   },
-  emits: ["toggle-dropdown"],
+  emits: ["toggle-menu"],
 };
 </script>
 
