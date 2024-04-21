@@ -37,7 +37,7 @@ export default {
 .topnav {
   background-color: aliceblue;
   overflow: hidden;
-  padding: 10px;
+  padding: 20px;
   justify-content: space-between;
   display: flex;
 }
