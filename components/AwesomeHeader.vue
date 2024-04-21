@@ -4,8 +4,8 @@
       <h1>Header</h1>
     </header>
     <AwesomeNavbar
-      :is-dropdown-open="isNavMenuOpen"
-      @toggle-dropdown="toggleDropdown"
+      :is-nav-menu-open="isNavMenuOpen"
+      @toggle-menu="toggleMenu"
     />
   </div>
 </template>
@@ -21,13 +21,13 @@ export default {
   setup() {
     const isNavMenuOpen = ref(false);
 
-    const toggleDropdown = () => {
+    const toggleMenu = () => {
       isNavMenuOpen.value = !isNavMenuOpen.value;
     };
 
     return {
       isNavMenuOpen,
-      toggleDropdown,
+      toggleMenu,
     };
   },
 };
