@@ -36,7 +36,7 @@ const filteredUsers = computed(() =>
     : []
 );
 
-const { data: users, pending } = await useFetch<User[]>(
-  "https://jsonplaceholder.typicode.com/users"
+const { data: users, pending } = useAsyncData<User[]>(() =>
+  fetch("https://jsonplaceholder.typicode.com/users").then((res) => res.json())
 );
 </script>
