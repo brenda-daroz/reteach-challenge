@@ -1,10 +1,10 @@
 <template>
-  <div :class="{ topnav: true, 'is-open': isDropdownOpen }">
+  <div :class="{ topnav: true, 'is-open': isNavMenuOpen }">
     <header>
       <h1>Header</h1>
     </header>
     <AwesomeNavbar
-      :is-dropdown-open="isDropdownOpen"
+      :is-dropdown-open="isNavMenuOpen"
       @toggle-dropdown="toggleDropdown"
     />
   </div>
@@ -19,14 +19,14 @@ export default {
     AwesomeNavbar,
   },
   setup() {
-    const isDropdownOpen = ref(false);
+    const isNavMenuOpen = ref(false);
 
     const toggleDropdown = () => {
-      isDropdownOpen.value = !isDropdownOpen.value;
+      isNavMenuOpen.value = !isNavMenuOpen.value;
     };
 
     return {
-      isDropdownOpen,
+      isNavMenuOpen,
       toggleDropdown,
     };
   },

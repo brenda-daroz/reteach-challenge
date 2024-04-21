@@ -1,6 +1,6 @@
 <template>
   <div class="navbar-wrapper">
-    <nav :class="{ navbar: true, 'is-open': isDropdownOpen }">
+    <nav :class="{ navbar: true, 'is-open': isNavMenuOpen }">
       <ul class="navbar-ul">
         <li><a href="/">Home</a></li>
         <li><a href="/">Home 2</a></li>
@@ -9,7 +9,7 @@
       </ul>
     </nav>
     <button class="navbar-burger" @click="$emit('toggle-dropdown')">
-      <span v-if="isDropdownOpen">✖</span>
+      <span v-if="isNavMenuOpen">✖</span>
       <span v-else>☰</span>
     </button>
   </div>
@@ -18,7 +18,7 @@
 <script lang="ts">
 export default {
   props: {
-    isDropdownOpen: Boolean,
+    isNavMenuOpen: Boolean,
   },
   emits: ["toggle-dropdown"],
 };
