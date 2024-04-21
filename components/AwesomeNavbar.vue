@@ -62,7 +62,7 @@ export default {
 @media screen and (max-width: 1024px) {
   .navbar {
     display: none;
-    top: 120px;
+    top: 140px;
     right: 0;
     width: 100%;
     position: fixed;
@@ -73,11 +73,12 @@ export default {
 
   .is-open {
     display: block;
-    justify-content: center;
   }
 
   .is-open > ul {
     flex-direction: column;
+    align-items: center;
+    padding: 20px;
   }
 
   .navbar-burger {
