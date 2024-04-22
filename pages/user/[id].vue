@@ -3,8 +3,8 @@
     <h1>User profile</h1>
     <p v-if="pending">Loading...</p>
     <div v-else>
-      <p>{{ userDetails?.name }}</p>
-      <p>{{ userDetails?.id }}</p>
+      <p>Name: {{ userDetails?.name }}</p>
+      <p>Email: {{ userDetails?.email }}</p>
     </div>
   </article>
 </template>
@@ -12,6 +12,7 @@
 <script setup lang="ts">
 type UserDetails = {
   id: number;
+  email: string;
   name: string;
 };
 const route = useRoute();
